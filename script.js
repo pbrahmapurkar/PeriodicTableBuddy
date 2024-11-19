@@ -12,12 +12,38 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeDraggedElement = null;
 
     const levels = [
-        { elements: [{ name: 'Hydrogen', atomicNumber: 1 }, { name: 'Helium', atomicNumber: 2 }] },
-        { elements: [{ name: 'Lithium', atomicNumber: 3 }, { name: 'Beryllium', atomicNumber: 4 }, { name: 'Boron', atomicNumber: 5 }, { name: 'Carbon', atomicNumber: 6 }] },
-        { elements: [{ name: 'Nitrogen', atomicNumber: 7 }, { name: 'Oxygen', atomicNumber: 8 }, { name: 'Fluorine', atomicNumber: 9 }, { name: 'Neon', atomicNumber: 10 }] },
-        { elements: [{ name: 'Sodium', atomicNumber: 11 }, { name: 'Magnesium', atomicNumber: 12 }, { name: 'Aluminum', atomicNumber: 13 }, { name: 'Silicon', atomicNumber: 14 }] },
-        { elements: [{ name: 'Phosphorus', atomicNumber: 15 }, { name: 'Sulfur', atomicNumber: 16 }, { name: 'Chlorine', atomicNumber: 17 }, { name: 'Argon', atomicNumber: 18 }] }
-    ];
+    { elements: [{ name: 'Hydrogen', atomicNumber: 1 }, { name: 'Helium', atomicNumber: 2 }] },
+    { elements: [{ name: 'Lithium', atomicNumber: 3 }, { name: 'Beryllium', atomicNumber: 4 }, { name: 'Boron', atomicNumber: 5 }, { name: 'Carbon', atomicNumber: 6 }] },
+    { elements: [{ name: 'Nitrogen', atomicNumber: 7 }, { name: 'Oxygen', atomicNumber: 8 }, { name: 'Fluorine', atomicNumber: 9 }, { name: 'Neon', atomicNumber: 10 }] },
+    { elements: [{ name: 'Sodium', atomicNumber: 11 }, { name: 'Magnesium', atomicNumber: 12 }, { name: 'Aluminum', atomicNumber: 13 }, { name: 'Silicon', atomicNumber: 14 }] },
+    { elements: [{ name: 'Phosphorus', atomicNumber: 15 }, { name: 'Sulfur', atomicNumber: 16 }, { name: 'Chlorine', atomicNumber: 17 }, { name: 'Argon', atomicNumber: 18 }] },
+    { elements: [{ name: 'Potassium', atomicNumber: 19 }, { name: 'Calcium', atomicNumber: 20 }, { name: 'Scandium', atomicNumber: 21 }, { name: 'Titanium', atomicNumber: 22 }] },
+    { elements: [{ name: 'Vanadium', atomicNumber: 23 }, { name: 'Chromium', atomicNumber: 24 }, { name: 'Manganese', atomicNumber: 25 }, { name: 'Iron', atomicNumber: 26 }] },
+    { elements: [{ name: 'Cobalt', atomicNumber: 27 }, { name: 'Nickel', atomicNumber: 28 }, { name: 'Copper', atomicNumber: 29 }, { name: 'Zinc', atomicNumber: 30 }] },
+    { elements: [{ name: 'Gallium', atomicNumber: 31 }, { name: 'Germanium', atomicNumber: 32 }, { name: 'Arsenic', atomicNumber: 33 }, { name: 'Selenium', atomicNumber: 34 }] },
+    { elements: [{ name: 'Bromine', atomicNumber: 35 }, { name: 'Krypton', atomicNumber: 36 }, { name: 'Rubidium', atomicNumber: 37 }, { name: 'Strontium', atomicNumber: 38 }] },
+    { elements: [{ name: 'Yttrium', atomicNumber: 39 }, { name: 'Zirconium', atomicNumber: 40 }, { name: 'Niobium', atomicNumber: 41 }, { name: 'Molybdenum', atomicNumber: 42 }] },
+    { elements: [{ name: 'Technetium', atomicNumber: 43 }, { name: 'Ruthenium', atomicNumber: 44 }, { name: 'Rhodium', atomicNumber: 45 }, { name: 'Palladium', atomicNumber: 46 }] },
+    { elements: [{ name: 'Silver', atomicNumber: 47 }, { name: 'Cadmium', atomicNumber: 48 }, { name: 'Indium', atomicNumber: 49 }, { name: 'Tin', atomicNumber: 50 }] },
+    { elements: [{ name: 'Antimony', atomicNumber: 51 }, { name: 'Tellurium', atomicNumber: 52 }, { name: 'Iodine', atomicNumber: 53 }, { name: 'Xenon', atomicNumber: 54 }] },
+    { elements: [{ name: 'Cesium', atomicNumber: 55 }, { name: 'Barium', atomicNumber: 56 }, { name: 'Lanthanum', atomicNumber: 57 }, { name: 'Cerium', atomicNumber: 58 }] },
+    { elements: [{ name: 'Praseodymium', atomicNumber: 59 }, { name: 'Neodymium', atomicNumber: 60 }, { name: 'Promethium', atomicNumber: 61 }, { name: 'Samarium', atomicNumber: 62 }] },
+    { elements: [{ name: 'Europium', atomicNumber: 63 }, { name: 'Gadolinium', atomicNumber: 64 }, { name: 'Terbium', atomicNumber: 65 }, { name: 'Dysprosium', atomicNumber: 66 }] },
+    { elements: [{ name: 'Holmium', atomicNumber: 67 }, { name: 'Erbium', atomicNumber: 68 }, { name: 'Thulium', atomicNumber: 69 }, { name: 'Ytterbium', atomicNumber: 70 }] },
+    { elements: [{ name: 'Lutetium', atomicNumber: 71 }, { name: 'Hafnium', atomicNumber: 72 }, { name: 'Tantalum', atomicNumber: 73 }, { name: 'Tungsten', atomicNumber: 74 }] },
+    { elements: [{ name: 'Rhenium', atomicNumber: 75 }, { name: 'Osmium', atomicNumber: 76 }, { name: 'Iridium', atomicNumber: 77 }, { name: 'Platinum', atomicNumber: 78 }] },
+    { elements: [{ name: 'Gold', atomicNumber: 79 }, { name: 'Mercury', atomicNumber: 80 }, { name: 'Thallium', atomicNumber: 81 }, { name: 'Lead', atomicNumber: 82 }] },
+    { elements: [{ name: 'Bismuth', atomicNumber: 83 }, { name: 'Polonium', atomicNumber: 84 }, { name: 'Astatine', atomicNumber: 85 }, { name: 'Radon', atomicNumber: 86 }] },
+    { elements: [{ name: 'Francium', atomicNumber: 87 }, { name: 'Radium', atomicNumber: 88 }, { name: 'Actinium', atomicNumber: 89 }, { name: 'Thorium', atomicNumber: 90 }] },
+    { elements: [{ name: 'Protactinium', atomicNumber: 91 }, { name: 'Uranium', atomicNumber: 92 }, { name: 'Neptunium', atomicNumber: 93 }, { name: 'Plutonium', atomicNumber: 94 }] },
+    { elements: [{ name: 'Americium', atomicNumber: 95 }, { name: 'Curium', atomicNumber: 96 }, { name: 'Berkelium', atomicNumber: 97 }, { name: 'Californium', atomicNumber: 98 }] },
+    { elements: [{ name: 'Einsteinium', atomicNumber: 99 }, { name: 'Fermium', atomicNumber: 100 }, { name: 'Mendelevium', atomicNumber: 101 }, { name: 'Nobelium', atomicNumber: 102 }] },
+    { elements: [{ name: 'Lawrencium', atomicNumber: 103 }, { name: 'Rutherfordium', atomicNumber: 104 }, { name: 'Dubnium', atomicNumber: 105 }, { name: 'Seaborgium', atomicNumber: 106 }] },
+    { elements: [{ name: 'Bohrium', atomicNumber: 107 }, { name: 'Hassium', atomicNumber: 108 }, { name: 'Meitnerium', atomicNumber: 109 }, { name: 'Darmstadtium', atomicNumber: 110 }] },
+    { elements: [{ name: 'Roentgenium', atomicNumber: 111 }, { name: 'Copernicium', atomicNumber: 112 }, { name: 'Nihonium', atomicNumber: 113 }, { name: 'Flerovium', atomicNumber: 114 }] },
+    { elements: [{ name: 'Moscovium', atomicNumber: 115 }, { name: 'Livermorium', atomicNumber: 116 }, { name: 'Tennessine', atomicNumber: 117 }, { name: 'Oganesson', atomicNumber: 118 }] }
+];
+
 
     const motivationalPrompts = [
         "Well done!", "Keep it up!", "Awesome job!", "Great work!", "Impressive!"
