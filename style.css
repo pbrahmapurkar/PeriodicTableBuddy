@@ -1,0 +1,161 @@
+/* Apply a linear gradient background to the entire body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Gradient background with browser compatibility */
+    background: -webkit-linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    background: -moz-linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    background: -o-linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+
+    background-size: cover;  /* Ensures the gradient fills the screen */
+    min-height: 100vh;       /* Ensure full-screen coverage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Basic styling for the start screen */
+#start-screen {
+    text-align: center;
+    margin-top: 20vh;
+    background: white;  /* White background for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;  /* Center align and fit screen */
+    max-width: 500px; /* Limit max width */
+}
+
+/* Buttons styling with gradient */
+#start-game-button, #back-button, #next-level {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0077cc, #005bb5); /* Gradient for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+#start-game-button:hover, #back-button:hover, #next-level:hover {
+    background: linear-gradient(135deg, #005bb5, #003d8f); /* Darker gradient on hover */
+}
+
+/* Game container with background styling */
+.container {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    background: white;  /* White background for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 80vw;        /* Responsive width */
+    max-width: 1200px;   /* Maximum width for large screens */
+    margin-bottom: 50px;
+}
+
+/* Position the logo at the bottom-right corner */
+.logo-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.logo-image {
+    width: 80px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.logo-image:hover {
+    opacity: 1;
+}
+
+/* Game elements and drop areas */
+.elements, .drop-areas {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
+
+.element, .drop-area {
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.drop-area {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Make text responsive with viewport width scaling */
+body {
+    font-size: 1.5vw; /* Scales font size with the viewport width */
+}
+
+/* Responsive button sizes for desktop */
+button {
+    margin: 20px 15px;
+    font-size: 16px; /* Adjust button size for desktop */
+}
+
+/* Validation message container */
+.validation-message {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f44336; /* Red background for error messages */
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    z-index: 1000; /* Ensure the message appears on top of other content */
+    display: none; /* Hidden by default */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    body {
+        font-size: 5vw; /* Scales font size for smaller screens */
+    }
+
+    button {
+        font-size: 6vw; /* Larger buttons on small screens */
+    }
+
+    .elements, .drop-areas {
+        width: 90%;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .container {
+        width: 95vw;  /* Ensure the container is fully responsive on mobile */
+    }
+
+    #start-screen {
+        width: 90%;  /* Make the start screen fit better on mobile */
+    }
+
+    /* Ensure validation messages fit within screen on mobile */
+    .validation-message {
+        font-size: 4vw; /* Scale message font size on mobile */
+        padding: 10px;
+        top: 0;  /* Ensure it stays at the top */
+    }
+}

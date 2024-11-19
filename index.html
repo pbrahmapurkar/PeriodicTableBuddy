@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table Buddy</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Initial Start Screen -->
+    <div id="start-screen">
+        <h1>Welcome to Periodic Table Buddy!</h1>
+        <p>Test your knowledge of the periodic table by matching elements with their atomic numbers.</p>
+        <button id="start-game-button">Start Game</button>
+    </div>
+
+    <!-- Main Game Container (Hidden initially) -->
+    <div id="game-container" class="container" style="display: none;">
+        <h1 id="game-title">Periodic Table Buddy</h1>
+        <p id="level-info">Level 1: Match the element with its atomic number!</p>
+        <div class="game-area">
+            <!-- Section for Draggable Elements -->
+            <div class="elements">
+                <h3>Elements</h3>
+                <div id="element-list">
+                    <!-- Example draggable elements (to be dynamically populated) -->
+                    <div class="element" draggable="true" data-atomic-number="1">Hydrogen</div>
+                    <div class="element" draggable="true" data-atomic-number="2">Helium</div>
+                </div>
+            </div>
+            <!-- Section for Drop Areas -->
+            <div class="drop-areas">
+                <h3>Atomic Numbers</h3>
+                <div id="drop-area-list">
+                    <!-- Example drop areas (to be dynamically populated) -->
+                    <div class="drop-area" data-atomic-number="1">1</div>
+                    <div class="drop-area" data-atomic-number="2">2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        <!-- Back and Next buttons -->
+        <button id="back-button">Back</button>
+        <button id="next-level" style="display:none;">Next Level</button>
+        <div id="feedback"></div>
+    </div>
+
+    <!-- Logo at the bottom-right corner -->
+    <div class="logo-container">
+        <img src="Prime_Brahma_Logo.png" alt="Prime Brahma Logo" class="logo-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
