@@ -2,7 +2,8 @@
 This application is an interactive drag-and-drop game designed to help users learn and engage with the Periodic Table of Elements.
 
 Key Features:
-Periodic Table-Based Matching:
+
+**Periodic Table-Based Matching:**
 
 Users can drag and drop elements into designated drop areas, where they must match the correct atomic number, chemical symbol, or properties of the element.
 Each element in the game corresponds to a specific spot on the Periodic Table, challenging users to connect their knowledge of chemistry with the game's interactive elements.
@@ -10,7 +11,8 @@ Educational Learning Tool:
 
 This game serves as an effective educational tool for students and learners interested in chemistry and the Periodic Table.
 It helps reinforce key concepts about the elements, their atomic numbers, and their symbols, making it ideal for chemistry classes or self-study.
-Interactive Drag-and-Drop Mechanics:
+**
+Interactive Drag-and-Drop Mechanics:**
 
 Users interact with the elements by dragging them from a list and dropping them into the correct areas (atomic number, symbol, or properties).
 Correct matches result in a visual cue, while incorrect matches prompt the user to try again, providing valuable learning feedback.
@@ -25,7 +27,8 @@ Visual Feedback for Learning:
 
 The application offers immediate visual feedback: correct answers are highlighted in green, while incorrect ones are marked in red. This reinforces learning by showing users whether their choices are correct or not.
 When a user matches an element correctly, a brief pop-up or animation might be displayed, giving the user more information about the element, such as its atomic number, symbol, or use.
-Mobile-Friendly:
+
+**Mobile-Friendly:**
 
 The app is optimized for mobile devices, ensuring that the Periodic Table and interactive elements are easy to interact with on smaller screens.
 Validation messages and feedback are visible without requiring users to scroll, providing a smooth user experience on all devices.
